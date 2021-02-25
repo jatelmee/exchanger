@@ -16,13 +16,12 @@ class Db
 
 		$config = require 'application/config/db.php';
 
-		list($host, $port, $name, $user, $password) = $config;
+		list('host' => $host, 'port' => $port, 'name' => $name, 'user' => $user, 'password' => $password) = $config;
 		$dsn = "pgsql:host=$host;port=$port;dbname=$name;user=$user;password=$password";
 
 		try {
 			$conn = new PDO($dsn);
 			if ($conn) {
-				echo "Connected to the <strong>$db</strong> database successfully!";
 				$this->db = $conn;
 			}
 		} catch (PDOException $e) {
