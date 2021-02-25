@@ -1,16 +1,18 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <style>
-    .depo-calc{
+    .depo-calc {
         display: flex;
         flex-direction: column;
         width: 100%;
         background-color: #e6b8ff;
         align-items: center;
     }
-    .h2-s{
+
+    .h2-s {
         color: #fff;
     }
-    .header-block{
+
+    .header-block {
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -18,34 +20,38 @@
         padding: 10px;
         margin: 10px;
     }
-    .whiter-style{
+
+    .whiter-style {
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 20px;
     }
-    .select-item{
+
+    .select-item {
         padding: 6px 15px;
         border: none;
         text-align: center;
     }
-    .button-block{
+
+    .button-block {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
     }
-    .tariffs-data{
+
+    .tariffs-data {
         display: block;
     }
 </style>
 <div class="depo-calc" id="app">
     <div class="tariffs-data">
-        <?php foreach ($tariffs as $key => $value) :?>
-            <div id="<?=$key.'*'.'title'?>"><?=$key.'*'.$value['title']?></div>
-            <div id="<?=$key.'description'?>"><?=$key.$value['description']?></div>
-            <div id="<?=$key.'hour'?>"><?=$key.$value['hour']?></div>
-            <div id="<?=$key.'percent'?>"><?=$key.$value['percent']?></div>
-            <div id="<?=$key.'min'?>"><?=$key.$value['min']?></div>
-            <div id="<?=$key.'max'?>"><?=$key.$value['max']?></div>
+        <?php foreach ($tariffs as $key => $value) : ?>
+            <div id="<?= $key . '*' . 'title' ?>"><?= $key . '*' . $value['title'] ?></div>
+            <div id="<?= $key . 'description' ?>"><?= $key . $value['description'] ?></div>
+            <div id="<?= $key . 'hour' ?>"><?= $key . $value['hour'] ?></div>
+            <div id="<?= $key . 'percent' ?>"><?= $key . $value['percent'] ?></div>
+            <div id="<?= $key . 'min' ?>"><?= $key . $value['min'] ?></div>
+            <div id="<?= $key . 'max' ?>"><?= $key . $value['max'] ?></div>
         <?php endforeach; ?>
     </div>
     <div class="header-block whiter-style">
@@ -54,7 +60,7 @@
         <div>
             <label for="">Выберите тип депозита</label>
             <select class="whiter-style select-item">
-                <?php foreach ($tariffs as $key => $val): ?>
+                <?php foreach ($tariffs as $key => $val) : ?>
                     <option>
                         <?php echo $val['title']; ?>
                     </option>
@@ -96,15 +102,15 @@
 
     </div>
 </div>
-<script src="/application/views/application/calc.js"></script>
+<script src="/dist/build.js"></script>
 <?php
-foreach ($tariffs as $key => $val){
-    echo $key.' => '.$val['title'].', ';
-    echo $val['description'].', ';
-    echo $val['hour'].', ';
-    echo $val['percent'].', ';
-    echo $val['min'].', ';
-    echo $val['max'].', ';
+foreach ($tariffs as $key => $val) {
+    echo $key . ' => ' . $val['title'] . ', ';
+    echo $val['description'] . ', ';
+    echo $val['hour'] . ', ';
+    echo $val['percent'] . ', ';
+    echo $val['min'] . ', ';
+    echo $val['max'] . ', ';
     echo "<br>";
 }
 ?>
