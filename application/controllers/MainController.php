@@ -9,6 +9,7 @@ class MainController extends Controller {
 	public function indexAction() {
 		$vars = [
 			'tariffs' => $this->tariffs,
+            'curr' => $this->currency,
 		];
 		$this->view->render('Главная страница', $vars);
 	}

@@ -40,7 +40,7 @@
 <div class="depo-calc" id="app">
     <div class="tariffs-data">
         <?php foreach ($tariffs as $key => $value) :?>
-            <div id="<?=$key.'*'.'title'?>"><?=$key.'*'.$value['title']?></div>
+            <div id="<?=$key.'*'.'title'.'*'?>"><?=$key.'*'.$value['title'].'*'?></div>
             <div id="<?=$key.'description'?>"><?=$key.$value['description']?></div>
             <div id="<?=$key.'hour'?>"><?=$key.$value['hour']?></div>
             <div id="<?=$key.'percent'?>"><?=$key.$value['percent']?></div>

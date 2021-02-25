@@ -10,6 +10,7 @@ abstract class Controller {
 	public $view;
 	public $acl;
 	public $tariffs;
+	public $currency;
 
 	public function __construct($route) {
 		$this->route = $route;
@@ -19,6 +20,7 @@ abstract class Controller {
 		$this->view = new View($route);
 		$this->model = $this->loadModel($route['controller']);
 		$this->tariffs = require 'application/config/tariffs.php';
+		$this->currency = require 'application/config/curr.php';
 	}
 
 	public function loadModel($name) {
