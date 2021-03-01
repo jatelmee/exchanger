@@ -10,7 +10,7 @@ class Db {
 	protected $db;
 	
 	public function __construct() {
-		$dsn = require 'application/config/viktor_db.php';
+		$dsn = require 'application/config/db.php';
 
 		try {
 			$conn = new PDO($dsn);
