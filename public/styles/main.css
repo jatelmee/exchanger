@@ -49,6 +49,7 @@ a:hover {
   right: 0;
   top: 100%;
   background: #3e4347;
+  pointer-events: none;
   border-width: 0px 1px 1px;
   border-right-style: solid;
   border-bottom-style: solid;
@@ -90,6 +91,7 @@ a:hover {
   opacity: 1;
   height: 369px;
   overflow-y: scroll;
+  pointer-events: all;
 }
 
 .select.isOpen .selected .option {
