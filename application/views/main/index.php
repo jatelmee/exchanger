@@ -104,9 +104,14 @@
             <div class="ex-card">
                 <h2>Получаю</h2>
                 <div class="select" id="after-cur">
-                    <?php foreach ($curr['give_out'] as $key => $value) : ?>
-                        <p><?= $value ?></p>
-                    <?php endforeach; ?>
+                    <div class="selected">
+                        <div class="option"><?= $curr['give_out'][0] ?></div>
+                    </div>
+                    <div class="list">
+                        <?php foreach ($curr['give_out'] as $key => $value) : ?>
+                            <div class="option"> <?= $value ?></div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
                 <div class="reserve">
                     Резерв <?= $reserve = 0; ?>
