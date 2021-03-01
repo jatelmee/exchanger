@@ -3,14 +3,23 @@
 namespace application\lib;
 
 use PDO;
+use PDOException;
 
 class Db {
 
 	protected $db;
 	
 	public function __construct() {
-		$config = require 'application/config/db.php';
-		$this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].'', $config['user'], $config['password']);
+		$dsn = require 'application/config/viktor_db.php';
+
+		try {
+			$conn = new PDO($dsn);
+			if ($conn) {
+				$this->db = $conn;
+			}
+		} catch (PDOException $e) {
+			echo $e->getMessage();
+		}
 	}
 
 	public function query($sql, $params = []) {
