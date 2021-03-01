@@ -96,7 +96,8 @@ body{
     min-height: 400px;
 }
 .ex-card h2{color: #ffffff; font-size: 33px; margin: 7px}
-#before-cur, #after-cur{
+
+/* #before-cur, #after-cur{
     margin: 7px;
     color: #fff;
     background-color: #6c757d;
@@ -105,7 +106,7 @@ body{
     font-size: 20px;
     padding: 7px;
     cursor: pointer;
-}
+} */
 .min-max-sum, .reserve{
     color: #88888a;
     margin: 7px;

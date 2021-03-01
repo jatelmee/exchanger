@@ -1,39 +1,97 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
-input[type='number'] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 .carousel-item {
-    height: 65vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .portfolio-item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-a{
-    text-decoration: none;
-    color: #fff;
+a {
+  text-decoration: none;
+  color: #fff;
 }
-a:hover{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
 }
-.container{
-    width: 100%;
-    max-width: 1200px;
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.select .list {
+  opacity: 0;
+  height: 0;
+  border-width: 0px 1px 1px;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-color: rgb(153, 150, 167);
+  border-bottom-color: rgb(153, 150, 167);
+  border-left-color: rgb(153, 150, 167);
+  border-image: initial;
+  border-top-style: initial;
+  border-top-color: initial;
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: rgb(50 50 50 / 10%) 0px 10px 20px;
+  transition: all 0.3s linear 0s;
+}
+
+.select .option {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 13px 16px 13px 20px;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+.select .selected .option {
+  border: 1px solid rgb(153, 150, 167);
+  border-radius: 8px;
+  transition: border-color 0.2s ease 0s;
+}
+
+.select .selected .option::after {
+  content: "▼";
+  display: block;
+  margin-left: auto;
+}
+
+.select.isOpen .list {
+  opacity: 1;
+  height: 369px;
+  overflow-y: scroll;
+}
+
+.select.isOpen .selected .option {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.select.isOpen .selected .option::after {
+  content: "▲";
+}
+
+.select .list .option:hover {
+  background: rgb(84, 86, 95);
+  color: rgb(255, 255, 255);
 }
