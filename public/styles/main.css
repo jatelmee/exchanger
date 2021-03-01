@@ -37,9 +37,18 @@ a:hover {
   max-width: 1200px;
 }
 
+.select {
+  position: relative;
+}
+
 .select .list {
   opacity: 0;
   height: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: #3e4347;
   border-width: 0px 1px 1px;
   border-right-style: solid;
   border-bottom-style: solid;
