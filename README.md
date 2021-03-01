@@ -1,2 +1,2 @@
 # php-invest
-Simple PHP OOP invest project (HYIP) based on mvc
+Simple PHP  project (Exchanger) based on mvc
